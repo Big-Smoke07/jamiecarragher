@@ -1,0 +1,21 @@
+{
+  "name": "discord-message-counter-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Discord bot that returns exact per-member message counts with a slash command.",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js",
+    "register": "node src/register-commands.js",
+    "backfill": "node src/backfill.js",
+    "check": "node --check src/config.js && node --check src/db.js && node --check src/bot.js && node --check src/register-commands.js && node --check src/backfill.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.4.7"
+  }
+}
